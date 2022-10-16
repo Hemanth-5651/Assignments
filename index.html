@@ -1,29 +1,33 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
   <head>
-    <title>Lunch Checker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <style>
-      .message { font-size: 1.3em; font-weight: bold; }
-    </style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Restaurant</title>
   </head>
-<body>
-   <div class="container">
-     <h1>Lunch Checker</h1>
+  <body>
+    <h1>Welcome to our Restaurant</h1>
 
-         <div class="form-group">
-             <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
-         </div>
-         <div class="form-group">
-             <button class="btn btn-default">Check If Too Much</button>
-         </div>
-         <div class="form-group message">
-           <!-- Your message can go here. -->
-         </div>
-   </div>
+    <ui-view></ui-view>
 
-</body>
+    <!-- Libraries -->
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+
+  <!-- Modules -->
+  <script src="src/menuapp/menuapp.module.js"></script>
+  <script src="src/menuapp/data.module.js"></script>
+
+  <!-- Routes -->
+  <script src="src/routes.js"></script>
+
+  <!-- 'MenuApp' module artifacts -->
+  <script src="src/menuapp/menudata.service.js"></script>
+  <script src="src/menuapp/categories.component.js"></script>
+  <script src="src/menuapp/items.component.js"></script>
+  <script src="src/menuapp/categories.controller.js"></script>
+  <script src="src/menuapp/items.controller.js"></script>
+
+  </body>
 </html>
